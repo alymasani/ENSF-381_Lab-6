@@ -52,7 +52,7 @@ width: -webkit-max-content; /* For Webkit */
                 const students = await response.json();
 
                 const studentList = document.getElementById('studentList');
-                studentList.innerHTML = ''; // Resets the students (just in case)
+                studentList.innerHTML = ''; 
 
                 students.forEach(student => {
                     const li = document.createElement('li');
@@ -68,7 +68,7 @@ width: -webkit-max-content; /* For Webkit */
         // Function to fetch and display courses
         async function fetchCourses(studentId) {
             try {
-                const response = await fetch(`https://65dfb28fff5e305f32a3040f.mockapi.io/students/${studentId}/courses`);
+                const response = await fetch("https://65dfb28fff5e305f32a3040f.mockapi.io/students/${studentId}/courses");
                 const courses = await response.json();
 
                 const courseList = document.getElementById('courseList');
